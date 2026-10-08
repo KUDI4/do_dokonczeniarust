@@ -1,0 +1,153 @@
+/* Import nowoczesnej czcionki */
+@import url('https://googleapis.com');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Zmiana czcionki na nowoczesną */
+    color: #f5f5f5; /* Jasny tekst na ciemnym tle */
+}
+
+.container {
+    display: flex;
+    min-height: 100vh; 
+    background-color: #1e1e1e; /* Głęboka, nowoczesna ciemna barwa */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.bok {
+    display: flex;
+    width: 15%; 
+    background-color: #252526; /* Nieco jaśniejszy szary dla kontrastu */
+    flex-shrink: 0;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Miękki cień pod panelem */
+}
+
+.prawa-strona {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    padding: 0 0 0 15px; /* Odstęp od bocznego panelu */
+    gap: 15px; 
+}
+
+.nag { 
+    display: flex;
+    background-color: #252526; 
+    padding: 15px; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nag h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.zakladki { 
+    display: flex;
+    background-color: #252526; 
+    padding: 15px; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main { 
+    background-color: #252526; 
+    padding: 20px; 
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main h1 {
+    color: #888; /* Stonowany kolor napisu w środku */
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* --- STYLIZACJA PRZYCISKÓW (To przykuje uwagę!) --- */
+
+.bok1, .bok2, .bok3 {
+    border: none; /* Pozbywamy się nudnej czarnej ramki */
+    border-radius: 14px;
+    background-color: #2d2d30;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Płynna animacja */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Efekt po najechaniu na przyciski w boku (Neonowy fiolet) */
+.bok1:hover, .bok2:hover, .bok3:hover {
+    background-color: #a855f7; /* Fioletowy akcent */
+    transform: scale(1.1); /* Delikatne powiększenie */
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6); /* Efekt świecenia glow */
+}
+
+.zakladka1, .zakladka2, .zakladka3, .zakladka4, .zakladka5 {
+    border: none;
+    border-radius: 12px;
+    height: 45px;
+    width: 45px;
+    background-color: #2d2d30;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Efekt po najechaniu na zakładki (Morski/Cyan) */
+.zakladka1:hover, .zakladka2:hover, .zakladka3:hover, .zakladka4:hover, .zakladka5:hover {
+    background-color: #06b6d4; /* Morskie podświetlenie */
+    transform: translateY(-4px); /* Lekkie uniesienie przycisku */
+    box-shadow: 0 8px 15px rgba(6, 182, 212, 0.4);
+}
+
+.bok1 button, .bok2 button, .bok3 button,
+.zakladka1 button, .zakladka2 button, .zakladka3 button, .zakladka4 button, .zakladka5 button {
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Usuwa domyślne szare tło buttona */
+    border: none;            /* Usuwa domyślną ramkę buttona */
+    color: inherit;          /* Dziedziczy biały kolor tekstu */
+    font-family: inherit;    /* Dziedziczy czcionkę Poppins */
+    font-weight: inherit;    /* Dziedziczy grubość czcionki */
+    font-size: 1.1rem;       /* Możesz lekko powiększyć cyfry */
+    cursor: pointer;         /* Zmienia kursor na rączkę */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;  /* Przycisk idealnie pokrywa zaokrąglone rogi rodzica */
+}
+
+/* Usuwamy brzydką obwódkę przy kliknięciu */
+.bok button:focus, .zakladki button:focus {
+    outline: none;
+}
